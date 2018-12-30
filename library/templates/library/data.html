@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Input data </title>
+<h1>Adding data to database </h1>
+</head>
+
+<div class="container">
+    <body>
+    <form action="" method="POST">
+    {% csrf_token %}
+    name: <br/><input type="text" name="name"/><br/>
+    genre: <br/><input type="text" name="genre"/><br/>
+    author: <br/><input type="text" name="author"/><br/>
+    section: <br/><input type="text" name="section"/><br/>
+    shelf_no:<br/> <input type="text" name="shelf_no"/><br/>
+    <input type="submit" value="Post"/>
+    </form>
+    </body>
+</div>
+</html>

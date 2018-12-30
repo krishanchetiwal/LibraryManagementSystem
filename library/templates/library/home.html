@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <h1>All Books are:</h1>
+</head>
+<body>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+    th {
+    background-color: #FF0000
+    }
+    tr:nth-child(even) {
+    background-color: #dddddd;
+}
+    </style>
+    <table  style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Author</th>
+        <th>Section</th>
+        <th>Shelf Number</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.name }}</td>
+        <td>{{ book.genre }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.section }}</td>
+        <td>{{ book.shelf_no }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
